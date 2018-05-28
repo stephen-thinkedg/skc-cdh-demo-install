@@ -1,0 +1,74 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+
+  config.vm.define :skc_cdh_mgt01 do |mgt01_config|
+      mg01_config.vm.provider "libvirt"
+      mg01_config.vm.box = "centos/7"
+      mg01_config.vm.hostname = "mg01"
+
+      # config.vm.provision "ansible" do |ansible|
+      #   ansible.verbose = "v"
+      #   ansible.playbook = "../provision/ansible/build.yml"
+      #   #ansible.sudo = true
+      #   ansible.config_file = "../provision/ansible/ansible.cfg"
+      # end
+  end
+
+  
+  config.vm.define :skc_cdh_dn01 do |dn01_config|
+      dn01_config.vm.provider "libvirt"
+      dn01_config.vm.box = "centos/7"
+      dn01_config.vm.hostname = "dn01"
+
+      # config.vm.provision "ansible" do |ansible|
+      #   ansible.verbose = "v"
+      #   ansible.playbook = "../provision/ansible/build.yml"
+      #   #ansible.sudo = true
+      #   ansible.config_file = "../provision/ansible/ansible.cfg"
+      # end
+  end
+
+  config.vm.define :skc_cdh_dn02 do |dn02_config|
+      dn02_config.vm.provider "libvirt"
+      dn02_config.vm.box = "centos/7"
+      dn02_config.vm.hostname = "dn02"
+
+      # config.vm.provision "ansible" do |ansible|
+      #   ansible.verbose = "v"
+      #   ansible.playbook = "../provision/ansible/build.yml"
+      #   #ansible.sudo = true
+      #   ansible.config_file = "../provision/ansible/ansible.cfg"
+      # end
+  end
+
+  config.vm.define :skc_cdh_dn03 do |dn03_config|
+      dn03_config.vm.provider "libvirt"
+      dn03_config.vm.box = "centos/7"
+      dn03_config.vm.hostname = "dn03"
+
+      # config.vm.provision "ansible" do |ansible|
+      #   ansible.verbose = "v"
+      #   ansible.playbook = "../provision/ansible/build.yml"
+      #   #ansible.sudo = true
+      #   ansible.config_file = "../provision/ansible/ansible.cfg"
+      # end
+    end
+
+    config.vm.define :skc_cdh_dn04 do |dn04_config|
+      dn04_config.vm.provider "libvirt"
+      dn04_config.vm.box = "centos/7"
+      dn04_config.vm.hostname = "dn04"
+
+      # config.vm.provision "ansible" do |ansible|
+      #   ansible.verbose = "v"
+      #   ansible.playbook = "../provision/ansible/build.yml"
+      #   #ansible.sudo = true
+      #   ansible.config_file = "../provision/ansible/ansible.cfg"
+      # end
+    end
+
+
+  
+end

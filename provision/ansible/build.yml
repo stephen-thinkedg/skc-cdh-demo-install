@@ -1,0 +1,18 @@
+---
+
+- hosts: all
+  become: yes
+  become_user: root
+  become_method: sudo
+
+
+  tasks:
+
+  - name: this is a test
+    debug: msg="this is a test"
+     
+  roles:
+
+    - install-emacs
+    - add-user
+    - install-docker

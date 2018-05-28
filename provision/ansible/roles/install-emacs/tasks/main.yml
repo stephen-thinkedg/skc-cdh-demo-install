@@ -1,0 +1,18 @@
+---
+# tasks file for roles/install-emacs
+
+- name: install emacs
+  package:
+    name: emacs
+    state: latest
+
+
+# - name: update
+#   shell: 'apt-get update'
+
+# - name: upgrade
+#   shell: 'apt-get -y upgrade'
+
+# - name: install emacs
+#   shell: 'apt-get -y install emacs'
+  

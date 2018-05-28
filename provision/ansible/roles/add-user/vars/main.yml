@@ -1,0 +1,11 @@
+---
+# vars file for roles/add-user
+
+
+
+# created with:
+#>>> import crypt
+#print crypt.crypt('BF', 'edg')
+
+edg_password : edpNpmefkUGIc
+edg_user : edg

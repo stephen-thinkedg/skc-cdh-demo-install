@@ -1,0 +1,21 @@
+---
+# tasks file for roles/add-user
+
+
+- name: add sudo if not there
+  package:
+    name: sudo
+    state: latest
+    
+- name: add sudo if not there
+  package:
+    name: tmux
+    state: latest
+
+
+- name: add the edg user to the system
+  action: user name={{ edg_user }} password={{ edg_password }} update_password=always shell=/bin/bash home=/home/{{ edg_user }}
+  #groups=sudo,www-data append=yes
+
+- name: add edg to the suders file
+  lineinfile: "dest=/etc/sudoers state=present regexp='^%edg' line='%edg ALL=(ALL) NOPASSWD: ALL'"
